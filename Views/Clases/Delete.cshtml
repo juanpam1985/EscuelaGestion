@@ -1,0 +1,17 @@
+@model Clase
+@{
+    ViewData["Title"] = "Eliminar clase";
+}
+
+<h2>Eliminar clase</h2>
+<p>¿Seguro que desea eliminar esta clase?</p>
+
+<p><strong>Clase:</strong> @Model.Nombre</p>
+<p><strong>Horario:</strong> @Model.Horario</p>
+<p><strong>Profesor:</strong> @Model.Profesor?.NombreCompleto</p>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="ClaseId" />
+    <input type="submit" value="Eliminar" />
+    <a asp-action="Index">Cancelar</a>
+</form>

@@ -1,0 +1,13 @@
+@model AsignacionClase
+@{
+    ViewData["Title"] = "Detalle asignación";
+}
+
+<h2>Detalle asignación</h2>
+
+<p><strong>Estudiante:</strong> @Model.Estudiante?.NombreCompleto</p>
+<p><strong>Clase:</strong> @Model.Clase?.Nombre</p>
+<p><strong>Fecha de asignación:</strong> @Model.FechaAsignacion.ToString("yyyy-MM-dd")</p>
+
+<a asp-action="Edit" asp-route-id="@Model.AsignacionId">Editar</a> |
+<a asp-action="Index">Volver</a>

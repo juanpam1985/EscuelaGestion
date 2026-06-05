@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 15px;
+}
+
+th, td {
+    border: 1px solid #999;
+    padding: 8px;
+    text-align: left;
+}
+
+input, select {
+    padding: 6px;
+    margin-bottom: 8px;
+    width: 280px;
+}
+
+label {
+    display: block;
+    margin-top: 8px;
+}
+
+button, input[type="submit"] {
+    width: auto;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.field-validation-error {
+    display: block;
+    margin-bottom: 8px;
+}

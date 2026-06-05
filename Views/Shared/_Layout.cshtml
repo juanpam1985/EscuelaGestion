@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EscuelaGestion</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <h1>Sistema de Gestión de Escuelas</h1>
+        <nav>
+            <a asp-controller="Home" asp-action="Index">Inicio</a> |
+            <a asp-controller="Estudiantes" asp-action="Index">Estudiantes</a> |
+            <a asp-controller="Profesores" asp-action="Index">Profesores</a> |
+            <a asp-controller="Clases" asp-action="Index">Clases</a> |
+            <a asp-controller="Asignaciones" asp-action="Index">Asignaciones</a>
+        </nav>
+        <hr />
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer>
+        <hr />
+        <p>UniAndes Morales Maldonado Juan Pablo.</p>
+    </footer>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

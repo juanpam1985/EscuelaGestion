@@ -1,0 +1,14 @@
+@model Profesor
+@{
+    ViewData["Title"] = "Detalle profesor";
+}
+
+<h2>Detalle profesor</h2>
+
+<p><strong>Nombre:</strong> @Model.Nombre</p>
+<p><strong>Apellido:</strong> @Model.Apellido</p>
+<p><strong>Especialidad:</strong> @Model.Especialidad</p>
+<p><strong>Email:</strong> @Model.Email</p>
+
+<a asp-action="Edit" asp-route-id="@Model.ProfesorId">Editar</a> |
+<a asp-action="Index">Volver</a>

@@ -1,0 +1,14 @@
+@model Estudiante
+@{
+    ViewData["Title"] = "Detalle estudiante";
+}
+
+<h2>Detalle estudiante</h2>
+
+<p><strong>Nombre:</strong> @Model.Nombre</p>
+<p><strong>Apellido:</strong> @Model.Apellido</p>
+<p><strong>Fecha de nacimiento:</strong> @Model.FechaNacimiento.ToString("yyyy-MM-dd")</p>
+<p><strong>Grado:</strong> @Model.Grado</p>
+
+<a asp-action="Edit" asp-route-id="@Model.EstudianteId">Editar</a> |
+<a asp-action="Index">Volver</a>

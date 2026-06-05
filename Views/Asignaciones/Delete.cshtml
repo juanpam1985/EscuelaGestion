@@ -1,0 +1,17 @@
+@model AsignacionClase
+@{
+    ViewData["Title"] = "Eliminar asignación";
+}
+
+<h2>Eliminar asignación</h2>
+<p>¿Seguro que desea eliminar esta asignación?</p>
+
+<p><strong>Estudiante:</strong> @Model.Estudiante?.NombreCompleto</p>
+<p><strong>Clase:</strong> @Model.Clase?.Nombre</p>
+<p><strong>Fecha:</strong> @Model.FechaAsignacion.ToString("yyyy-MM-dd")</p>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="AsignacionId" />
+    <input type="submit" value="Eliminar" />
+    <a asp-action="Index">Cancelar</a>
+</form>

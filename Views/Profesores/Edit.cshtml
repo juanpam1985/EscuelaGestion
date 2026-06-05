@@ -1,0 +1,30 @@
+@model Profesor
+@{
+    ViewData["Title"] = "Editar profesor";
+}
+
+<h2>Editar profesor</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="ProfesorId" />
+
+    <label asp-for="Nombre"></label>
+    <input asp-for="Nombre" />
+    <span asp-validation-for="Nombre"></span>
+
+    <label asp-for="Apellido"></label>
+    <input asp-for="Apellido" />
+    <span asp-validation-for="Apellido"></span>
+
+    <label asp-for="Especialidad"></label>
+    <input asp-for="Especialidad" />
+    <span asp-validation-for="Especialidad"></span>
+
+    <label asp-for="Email"></label>
+    <input asp-for="Email" />
+    <span asp-validation-for="Email"></span>
+
+    <br />
+    <input type="submit" value="Guardar" />
+    <a asp-action="Index">Volver</a>
+</form>

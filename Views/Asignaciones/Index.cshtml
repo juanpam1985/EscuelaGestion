@@ -1,0 +1,35 @@
+@model IEnumerable<AsignacionClase>
+@{
+    ViewData["Title"] = "Asignaciones";
+}
+
+<h2>Asignaciones de clases</h2>
+<p><a asp-action="Create">Nueva asignación</a></p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Estudiante</th>
+            <th>Clase</th>
+            <th>Profesor</th>
+            <th>Fecha</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Estudiante?.NombreCompleto</td>
+            <td>@item.Clase?.Nombre</td>
+            <td>@item.Clase?.Profesor?.NombreCompleto</td>
+            <td>@item.FechaAsignacion.ToString("yyyy-MM-dd")</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AsignacionId">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.AsignacionId">Detalle</a> |
+                <a asp-action="Delete" asp-route-id="@item.AsignacionId">Eliminar</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

@@ -1,0 +1,24 @@
+@model AsignacionClase
+@{
+    ViewData["Title"] = "Nueva asignación";
+}
+
+<h2>Nueva asignación</h2>
+
+<form asp-action="Create" method="post">
+    <label asp-for="EstudianteId"></label>
+    <select asp-for="EstudianteId" asp-items="ViewBag.EstudianteId"></select>
+    <span asp-validation-for="EstudianteId"></span>
+
+    <label asp-for="ClaseId"></label>
+    <select asp-for="ClaseId" asp-items="ViewBag.ClaseId"></select>
+    <span asp-validation-for="ClaseId"></span>
+
+    <label asp-for="FechaAsignacion"></label>
+    <input asp-for="FechaAsignacion" type="date" />
+    <span asp-validation-for="FechaAsignacion"></span>
+
+    <br />
+    <input type="submit" value="Guardar" />
+    <a asp-action="Index">Volver</a>
+</form>

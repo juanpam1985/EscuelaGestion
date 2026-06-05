@@ -1,0 +1,24 @@
+@model Clase
+@{
+    ViewData["Title"] = "Nueva clase";
+}
+
+<h2>Nueva clase</h2>
+
+<form asp-action="Create" method="post">
+    <label asp-for="Nombre"></label>
+    <input asp-for="Nombre" />
+    <span asp-validation-for="Nombre"></span>
+
+    <label asp-for="Horario"></label>
+    <input asp-for="Horario" />
+    <span asp-validation-for="Horario"></span>
+
+    <label asp-for="ProfesorId"></label>
+    <select asp-for="ProfesorId" asp-items="ViewBag.ProfesorId"></select>
+    <span asp-validation-for="ProfesorId"></span>
+
+    <br />
+    <input type="submit" value="Guardar" />
+    <a asp-action="Index">Volver</a>
+</form>
